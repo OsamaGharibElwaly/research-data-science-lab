@@ -1,7 +1,3 @@
-Here is the complete, well-structured Markdown file. It includes all the notes, exercises, mental models, and interactive diagrams (using Mermaid.js, which renders natively in most Markdown viewers like GitHub, Notion, and Obsidian). 
-
-I have also added collapsible solution sections so you can test yourself before checking the answers.
-
 ***
 
 
