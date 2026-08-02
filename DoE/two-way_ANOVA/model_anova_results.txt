@@ -1,0 +1,73 @@
+============================================================
+TWO-WAY ANOVA COMPLETE CASE STUDY - MODEL & RESULTS
+============================================================
+
+1. REGRESSION MODEL SUMMARY
+------------------------------------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 Height   R-squared:                       0.938
+Model:                            OLS   Adj. R-squared:                  0.925
+Method:                 Least Squares   F-statistic:                     68.55
+Date:                Sun, 02 Aug 2026   Prob (F-statistic):           1.81e-19
+Time:                        11:16:32   Log-Likelihood:                -102.24
+No. Observations:                  45   AIC:                             222.5
+Df Residuals:                      36   BIC:                             238.7
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===============================================================================================================
+                                                  coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                      74.0660      1.173     63.126      0.000      71.686      76.446
+C(Fertilizer)[T.Mixed]                         13.3428      1.659      8.041      0.000       9.978      16.708
+C(Fertilizer)[T.Organic]                       -6.6612      1.659     -4.014      0.000     -10.026      -3.296
+C(Water)[T.Low]                               -16.2147      1.659     -9.772      0.000     -19.580     -12.849
+C(Water)[T.Medium]                             -6.4630      1.659     -3.895      0.000      -9.828      -3.098
+C(Fertilizer)[T.Mixed]:C(Water)[T.Low]         -5.5929      2.347     -2.383      0.023     -10.352      -0.834
+C(Fertilizer)[T.Organic]:C(Water)[T.Low]        2.1869      2.347      0.932      0.358      -2.572       6.946
+C(Fertilizer)[T.Mixed]:C(Water)[T.Medium]     -10.4075      2.347     -4.435      0.000     -15.167      -5.648
+C(Fertilizer)[T.Organic]:C(Water)[T.Medium]     3.3696      2.347      1.436      0.160      -1.390       8.129
+==============================================================================
+Omnibus:                        2.371   Durbin-Watson:                   2.376
+Prob(Omnibus):                  0.306   Jarque-Bera (JB):                1.568
+Skew:                           0.217   Prob(JB):                        0.456
+Kurtosis:                       2.195   Cond. No.                         13.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+2. ANOVA TABLE
+------------------------------------------------------------
+                             sum_sq    df           F        PR(>F)
+C(Fertilizer)           1257.924186   2.0   91.375332  7.840724e-15
+C(Water)                2257.852482   2.0  164.009900  8.188321e-19
+C(Fertilizer):C(Water)   259.230343   4.0    9.415217  2.581706e-05
+Residual                 247.798118  36.0         NaN           NaN
+
+3. EFFECT SIZE (Partial Eta Squared)
+------------------------------------------------------------
+               Source           SS  DF           F         p_unc       np2
+0          Fertilizer  1257.924186   2   91.375332  7.840724e-15  0.835429
+1               Water  2257.852482   2  164.009900  8.188321e-19  0.901104
+2  Fertilizer * Water   259.230343   4    9.415217  2.581706e-05  0.511274
+3            Residual   247.798118  36         NaN           NaN       NaN
+
+4. POST-HOC TESTS (Tukey HSD)
+------------------------------------------------------------
+Fertilizer Comparison:
+          A        B     mean_A     mean_B       diff   p_tukey
+0  Chemical    Mixed  66.506740  74.516032  -8.009292  0.026149
+1  Chemical  Organic  66.506740  61.697712   4.809027  0.247229
+2     Mixed  Organic  74.516032  61.697712  12.818320  0.000265
+
+Water Level Comparison:
+      A       B     mean_A     mean_B       diff       p_tukey
+0  High     Low  76.293161  58.943145  17.350016  1.468526e-08
+1  High  Medium  76.293161  67.484178   8.808983  1.655240e-03
+2   Low  Medium  58.943145  67.484178  -8.541033  2.300874e-03
+
+5. ASSUMPTIONS CHECK
+------------------------------------------------------------
+Shapiro-Wilk Test (Normality): statistic=0.9697, p-value=0.2815
+Levene Test (Homogeneity of Variance): statistic=0.3192, p-value=0.9535
