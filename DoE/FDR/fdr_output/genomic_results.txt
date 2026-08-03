@@ -1,0 +1,29 @@
+GENOMIC DATA FDR ANALYSIS
+==================================================
+Timestamp: 2026-08-03 20:50:42
+
+Parameters:
+  Total genes: 1000
+  True differentially expressed: 200
+  Alpha: 0.05
+  Method: Benjamini-Hochberg
+
+Results:
+  Rejected hypotheses: 62
+  True positives: 58
+  False positives: 4
+  Estimated FDR: 0.0645
+  Power: 0.2900
+
+Top 10 Significant Genes (by adjusted p-value):
+  gene_id  p_value  adjusted_p_value  t_statistic
+GENE_0033 0.000004          0.003557    -5.753790
+GENE_0001 0.000035          0.004940    -4.919292
+GENE_0030 0.000034          0.004940    -4.925884
+GENE_0035 0.000028          0.004940    -5.001814
+GENE_0126 0.000019          0.004940    -5.135344
+GENE_0134 0.000021          0.004940    -5.101911
+GENE_0159 0.000017          0.004940    -5.180862
+GENE_0006 0.000078          0.005579    -4.623039
+GENE_0080 0.000065          0.005579    -4.689205
+GENE_0133 0.000047          0.005579    -4.809970

@@ -1,0 +1,20 @@
+A/B TESTING FDR ANALYSIS
+==================================================
+Timestamp: 2026-08-03 20:50:46
+
+
+BH Method:
+  Rejected: 12
+  True positives: 10
+  False positives: 2
+
+BY Method:
+  Rejected: 11
+  True positives: 10
+  False positives: 1
+
+qvalue Method:
+  Rejected: 12
+  True positives: 10
+  False positives: 2
+  Estimated pi0: 0.760

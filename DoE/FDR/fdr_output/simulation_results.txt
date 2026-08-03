@@ -1,0 +1,25 @@
+FDR SIMULATION STUDY RESULTS
+==================================================
+Timestamp: 2026-08-03 20:50:47
+Parameters:
+  Simulations: 50
+  Tests per simulation: 500
+  pi0 values: [0.5, 0.7, 0.9]
+  Effect sizes: [0.5, 1.0, 1.5]
+
+Results Table:
+ pi0  effect_size  mean_fdr  std_fdr  mean_power  std_power
+ 0.5          0.5  0.489913 0.130256    0.032320   0.015027
+ 0.5          1.0  0.502575 0.227960    0.016000   0.011370
+ 0.5          1.5  0.521301 0.218512    0.010240   0.008204
+ 0.7          0.5  0.686008 0.234867    0.014533   0.012557
+ 0.7          1.0  0.582095 0.368323    0.006933   0.008940
+ 0.7          1.5  0.548333 0.414665    0.004400   0.005595
+ 0.9          0.5  0.704333 0.432265    0.002000   0.006000
+ 0.9          1.0  0.450000 0.492443    0.000800   0.003919
+ 0.9          1.5  0.258333 0.422378    0.001200   0.004750
+
+Interpretation:
+- FDR should be controlled near 0.05 (target alpha)
+- Power increases with effect size and decreases with pi0
+- pi0 = proportion of true null hypotheses
