@@ -13,3 +13,5 @@ Yes, an AR(10) model means your forecast depends directly on the 10 past values 
 
 AR(1) tomorrow with today's value
 AR(0) no past no today just forecast with no past values
+
+cross covariance
